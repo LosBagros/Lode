@@ -78,6 +78,12 @@ namespace lode
                 return;
             }
 
+            Point zacatekLode = new Point(nakliknutePolicko.X, nakliknutePolicko.Y);
+            for(int i = 0; i < 1; i++)
+            {
+                zacatekLode.Offset(smerX, smerY);
+            }
+
 
         }
     }
