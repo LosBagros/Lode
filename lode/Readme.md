@@ -1,0 +1,3 @@
+# Lode
+
+Skola Winforms lode co ja vim....
