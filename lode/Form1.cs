@@ -49,8 +49,36 @@ namespace lode
             // Start hry
         }
 
+
+        private Policko nakliknutePolicko = null;
         private void OnPolickoKliklo(Policko policko)
         {
+            if (policko.Hrac != AktualniHrac)
+                return;
+
+            // kontrola ze neni lod
+            if (nakliknutePolicko == null)
+            {
+                nakliknutePolicko = policko;
+                return;
+            }
+
+            if (nakliknutePolicko == policko)
+            {
+                nakliknutePolicko = null;
+                return;
+            }
+
+            int smerX = policko.X - nakliknutePolicko.X;
+            int smerY = policko.Y - nakliknutePolicko.Y;
+
+            if(Math.Abs(smerX) + Math.Abs(smerY) > 1)
+            {
+                MessageBox.Show("AAAAAAAAAA");
+                return;
+            }
+
+
         }
     }
 }
